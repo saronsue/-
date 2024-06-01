@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抽奖页面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        .container {
+            text-align: center;
+        }
+        .joke {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>欢迎参加抽奖活动！</h1>
+        <a href="#" id="lottery-link">立即参与抽奖</a>
+        <p class="joke" id="joke">你被逗了！这里没有抽奖，只有这句话 😜</p>
+    </div>
+
+    <script>
+        document.getElementById('lottery-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('joke').style.display = 'block';
+        });
+    </script>
+</body>
+</html>
